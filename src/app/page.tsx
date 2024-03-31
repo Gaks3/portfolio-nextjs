@@ -1,113 +1,92 @@
-import Image from "next/image";
+import { items } from '@/components/BentoItems'
+import { ProjectCards } from '@/components/ProjectCard'
+import { BentoGrid, BentoGridItem } from '@/components/ui/bento-grid'
+import { Button } from '@/components/ui/button'
+import { Spotlight } from '@/components/ui/spotlight'
+import { Github, Instagram, Linkedin } from 'lucide-react'
+import Link from 'next/link'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className='w-full min-h-screen mb-32 space-y-20 pr-3 md:pr-0'>
+      <section className='relative flex items-center w-full h-screen' id='hero'>
+        <Spotlight className='left-10 top-10 md:-top-10 md:left-56' />
+        <h1 className='font-bold text-4xl md:text-7xl'>
+          Coffee, code, and creativity
+          <br /> - building the future.
+        </h1>
+        <div className='absolute bottom-5 w-full flex flex-col gap-3 md:flex-row md:justify-between items-center pr-5'>
+          <div className='space-x-3 text-center'>
+            <span className='font-semibold'>Ade Bagas Wicaksono</span>
+            <span>/</span>
+            <span className='block md:inline-block'>Still a Student</span>
+          </div>
+          <div>
+            <Button
+              className='bg-primary-foreground text-primary hover:bg-inherit hover:border-border hover:border hover:text-primary-foreground hover:scale-105'
+              asChild
+            >
+              <Link href={'#contact'}>Contact Me</Link>
+            </Button>
+          </div>
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      </section>
+      <section id='about'>
+        <h2 className='text-3xl font-bold text-center'>
+          Ab<span className='underline'>out.</span>
+        </h2>
+        <BentoGrid className='max-w-4xl mx-auto'>
+          {items.map((item, i) => (
+            <BentoGridItem
+              key={i}
+              title={item.title}
+              description={item.description}
+              header={item.header}
+              icon={item.icon}
+              className={i === 1 || i === 2 ? 'md:col-span-2' : ''}
+            />
+          ))}
+        </BentoGrid>
+      </section>
+      <section id='project'>
+        <h2 className='text-3xl font-bold text-center'>
+          <span className='underline'>Pro</span>ject.
+        </h2>
+        <div className='grid grid-cols-1 md:grid-cols-3 mt-3 gap-x-10 px-5 gap-y-5'>
+          <ProjectCards />
+        </div>
+      </section>
+      <section id='contact'>
+        <h2 className='text-3xl font-bold text-center'>
+          Cont<span className='underline'>act.</span>
+        </h2>
+        <div className='grid grid-cols-2 md:grid-cols-3 mt-3 px-3'>
+          <Link
+            href={'https://github.com/Gaks3'}
+            className='flex items-center justify-center w-full min-h-40 hover:bg-[#24292e] rounded-md transition-colors duration-200 group'
+          >
+            <div className='flex items-center justify-center w-10 h-10 bg-[#24292e] rounded-full text-white group-hover:bg-white group-hover:text-[#24292e] transition-colors duration-200'>
+              <Github />
+            </div>
+          </Link>
+          <Link
+            href={'https://www.instagram.com/gaks_3/'}
+            className='flex items-center justify-center w-full min-h-40 hover:bg-[#C13584] rounded-md transition-colors duration-200 group'
+          >
+            <div className='flex items-center justify-center w-10 h-10 bg-[#C13584] rounded-full text-white group-hover:bg-white group-hover:text-[#C13584] transition-colors duration-200'>
+              <Instagram />
+            </div>
+          </Link>
+          <Link
+            href={'https://www.linkedin.com/in/ade-bagas-wicaksono/'}
+            className='flex items-center justify-center w-full min-h-40 hover:bg-[#0A66C2] rounded-md transition-colors duration-200 group col-span-2 md:col-auto'
+          >
+            <div className='flex items-center justify-center w-10 h-10 bg-[#0A66C2] rounded-full text-white group-hover:bg-white group-hover:text-[#0A66C2] transition-colors duration-200'>
+              <Linkedin />
+            </div>
+          </Link>
+        </div>
+      </section>
     </main>
-  );
+  )
 }
