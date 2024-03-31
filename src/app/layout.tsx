@@ -30,6 +30,13 @@ export const metadata: Metadata = {
     emails: 'dwi66116@gmail.com',
     url: 'https://adebagas.vercel.app',
     siteName: 'Ade Bagas | Portfolio',
+    images: [
+      {
+        url: 'https://adebagas.vercel.app/opengraph-image.png',
+        width: 800,
+        height: 600,
+      },
+    ],
   },
   twitter: {
     title: 'Ade Bagas | Portfolio',
@@ -37,6 +44,13 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     creator: '@gaks_3',
     site: 'https://adebagas.vercel.app',
+    images: [
+      {
+        url: 'https://adebagas.vercel.app/twitter-image.png',
+        width: 800,
+        height: 600,
+      },
+    ],
   },
   verification: {
     google: '_-X36VnEIWAWaq6cTM8oxBtvycZTDqRUnIvbaAuCdB4',
