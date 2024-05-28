@@ -9,12 +9,14 @@ export default function ProjectCard({
   date,
   description,
   link,
+  label = 'Github Repo',
 }: {
   image: string
   title: string
   date: string
   description: string
   link: string
+  label?: string
 }) {
   return (
     <div className='flex flex-col w-full h-full space-y-2'>
@@ -42,7 +44,7 @@ export default function ProjectCard({
         asChild
       >
         <Link href={link}>
-          Github Repo <ArrowRight size={18} className='animate-bounce-right' />
+          {label} <ArrowRight size={18} className='animate-bounce-right' />
         </Link>
       </Button>
     </div>
@@ -73,6 +75,14 @@ export function ProjectCards() {
         date='April 2024'
         description="The website typically includes a catalog of the library's holdings, as well as features for managing book loans, user accounts, and library statistics. The website can be used by patrons to search for books, place holds, renew loans, and view their account information. Created with NextJS, ShadcnUi, Tailwind, Prisma, and MySQL."
         link='https://github.com/Gaks3/perpus'
+      />
+      <ProjectCard
+        image='/dino-game.png'
+        title='Dino Game'
+        date='May 2024'
+        description='Dinosaur T-Rex Game is a replica of the hidden Chrome browser game that appears when there is no internet. Just use plain HTML and some javascript.'
+        label='Demo'
+        link='https://gaks3.github.io/dino-game/'
       />
     </>
   )
