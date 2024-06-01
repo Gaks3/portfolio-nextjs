@@ -43,7 +43,7 @@ export default function ProjectCard({
         className='flex items-end flex-grow gap-2 text-primary-foreground'
         asChild
       >
-        <Link href={link}>
+        <Link href={link} target='_blank'>
           {label} <ArrowRight size={18} className='animate-bounce-right' />
         </Link>
       </Button>
@@ -54,6 +54,14 @@ export default function ProjectCard({
 export function ProjectCards() {
   return (
     <>
+      <ProjectCard
+        image='/pgri-diy.png'
+        title='PGRI DIY'
+        date='May 2024'
+        description='PGRI DIY website is an online platform of the Indonesian Teachers Association of Yogyakarta Special Region. This site provides information on various activities, programs, and initiatives undertaken by PGRI DIY to improve the professionalism and welfare of teachers in the Yogyakarta region.'
+        link='https://pgridiy.or.id'
+        label='Check'
+      />
       <ProjectCard
         image='/animlist.png'
         title='Anime List'
@@ -81,7 +89,7 @@ export function ProjectCards() {
         title='Dino Game'
         date='May 2024'
         description='Dinosaur T-Rex Game is a replica of the hidden Chrome browser game that appears when there is no internet. Just use plain HTML and some javascript.'
-        label='Demo'
+        label='Check'
         link='https://gaks3.github.io/dino-game/'
       />
     </>
