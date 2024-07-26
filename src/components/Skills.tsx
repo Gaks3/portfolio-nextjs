@@ -38,7 +38,7 @@ export default function Skills() {
   ]
 
   return (
-    <div className='flex flex-row h-auto items-center justify-center'>
+    <div className='flex flex-row h-auto items-center justify-center flex-wrap gap-5'>
       {images.map((image, id) => (
         <Image
           src={`/${image.url}`}
@@ -46,7 +46,6 @@ export default function Skills() {
           width={100}
           height={100}
           key={id}
-          className='mx-3'
         />
       ))}
     </div>
