@@ -28,6 +28,10 @@ export default function Skills() {
       alt: 'PostreSQL Logo',
     },
     {
+      url: 'mysql.png',
+      alt: 'Mysql Logo',
+    },
+    {
       url: 'tailwind.png',
       alt: 'Tailwind Logo',
     },
