@@ -1,5 +1,6 @@
 import { items } from '@/components/BentoItems'
 import { ProjectCards } from '@/components/ProjectCard'
+import Skills from '@/components/Skills'
 import { BentoGrid, BentoGridItem } from '@/components/ui/bento-grid'
 import { Button } from '@/components/ui/button'
 import { Spotlight } from '@/components/ui/spotlight'
@@ -47,6 +48,14 @@ export default function Home() {
             />
           ))}
         </BentoGrid>
+      </section>
+      <section id='skills'>
+        <h2 className='text-3xl font-bold text-center'>
+          S<span className='underline'>kill</span>s and Tools.
+        </h2>
+        <div className='mt-3'>
+          <Skills />
+        </div>
       </section>
       <section id='project'>
         <h2 className='text-3xl font-bold text-center'>

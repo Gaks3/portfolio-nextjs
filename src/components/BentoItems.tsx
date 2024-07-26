@@ -1,12 +1,12 @@
-import Skeleton from '@/components/Skeleton'
-import { Atom, School, Server, Shapes } from 'lucide-react'
-import Image from 'next/image'
+import Skeleton from '@/components/Skeleton';
+import { Atom, School, Server, Shapes } from 'lucide-react';
+import Image from 'next/image';
 
 export const items = [
   {
     title: 'Currently attending SMK Negeri 2 Yogyakarta',
     description:
-      '11th grade with majors "Sistem Informasi Jaringan dan Aplikasi.',
+      '12th grade with majors "Sistem Informasi Jaringan dan Aplikasi.',
     header: (
       <Skeleton>
         <Image
@@ -22,7 +22,7 @@ export const items = [
   {
     title: 'Sistem Informasi Jaringan dan Aplikasi',
     description:
-      'This major equips students with the knowledge and skills to build, manage, and secure computer networks, as well as develop software applications.',
+      'This major equips students with the knowledge and skills to build, manage, and secure computer networks, as well develop software applications.',
     header: (
       <Skeleton>
         <Image
@@ -67,4 +67,4 @@ export const items = [
     ),
     icon: <Server className='w-4 h-4 text-neutral-500' />,
   },
-]
+];
