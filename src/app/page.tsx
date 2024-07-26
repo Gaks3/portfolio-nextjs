@@ -1,4 +1,5 @@
 import { items } from '@/components/BentoItems'
+import Contacts from '@/components/Contacts'
 import { ProjectCards } from '@/components/ProjectCard'
 import Skills from '@/components/Skills'
 import { BentoGrid, BentoGridItem } from '@/components/ui/bento-grid'
@@ -69,31 +70,8 @@ export default function Home() {
         <h2 className='text-3xl font-bold text-center'>
           Cont<span className='underline'>act.</span>
         </h2>
-        <div className='grid grid-cols-2 md:grid-cols-3 mt-3 px-3'>
-          <Link
-            href={'https://github.com/Gaks3'}
-            className='flex items-center justify-center w-full min-h-40 hover:bg-[#24292e] rounded-md transition-colors duration-200 group'
-          >
-            <div className='flex items-center justify-center w-10 h-10 bg-[#24292e] rounded-full text-white group-hover:bg-white group-hover:text-[#24292e] transition-colors duration-200'>
-              <Github />
-            </div>
-          </Link>
-          <Link
-            href={'https://www.instagram.com/gaks_3/'}
-            className='flex items-center justify-center w-full min-h-40 hover:bg-[#C13584] rounded-md transition-colors duration-200 group'
-          >
-            <div className='flex items-center justify-center w-10 h-10 bg-[#C13584] rounded-full text-white group-hover:bg-white group-hover:text-[#C13584] transition-colors duration-200'>
-              <Instagram />
-            </div>
-          </Link>
-          <Link
-            href={'https://www.linkedin.com/in/ade-bagas-wicaksono/'}
-            className='flex items-center justify-center w-full min-h-40 hover:bg-[#0A66C2] rounded-md transition-colors duration-200 group col-span-2 md:col-auto'
-          >
-            <div className='flex items-center justify-center w-10 h-10 bg-[#0A66C2] rounded-full text-white group-hover:bg-white group-hover:text-[#0A66C2] transition-colors duration-200'>
-              <Linkedin />
-            </div>
-          </Link>
+        <div className='grid grid-cols-2 md:grid-cols-3 mt-3 px-3 gap-3'>
+          <Contacts />
         </div>
       </section>
     </main>
