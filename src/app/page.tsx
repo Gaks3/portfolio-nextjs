@@ -5,7 +5,6 @@ import Skills from '@/components/Skills'
 import { BentoGrid, BentoGridItem } from '@/components/ui/bento-grid'
 import { Button } from '@/components/ui/button'
 import { Spotlight } from '@/components/ui/spotlight'
-import { Github, Instagram, Linkedin } from 'lucide-react'
 import Link from 'next/link'
 
 export default function Home() {
